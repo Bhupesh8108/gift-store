@@ -10,9 +10,9 @@
   {% load static %}
   <link rel="stylesheet" href="{% static 'home.css'%}">
 <header class="main-header">
-  <div   class="brand-log"><a  href=""><img height = "50px" src="{% static 'download.png'%}" alt=""></a></div>
+  <div   class="brand-logo"><a  href=""><img height = "50px" src="{% static 'download.png'%}" alt=""></a></div>
   <div class="search-bar">
-    <form action="google.com">
+    <form  class="search">
       <button type = "submit">
   <label class="x1a2a7pz x1qjc9v5 xnwf7zb x40j3uw x1s7lred x15gyhx8 x9f619 x78zum5 x1fns5xo x1n2onr6 xh8yej3 x1ba4aug xmjcpbm">
     <span class="xhb22t3 xb5gni xcj1dhv x6s0dn4 x78zum5 xuxw1ft x47corl x1ye3gou">
@@ -24,7 +24,7 @@
             <path d="M9.557 11.659c.038-.018.09-.04.15-.064.207-.077.408-.112.562-.092.08.01.143.034.198.077l.041.036a.75.75 0 0 0 1.06-1.06 1.881 1.881 0 0 0-1.103-.54c-.435-.058-.867.018-1.284.175-.189.07-.336.143-.433.2a.75.75 0 0 0 .624 1.356l.066-.027.12-.061z" transform="translate(448 544)"></path>
             <path d="m13.463 15.142-.04-.044-3.574-4.192c-.599-.703.355-1.656 1.058-1.057l4.191 3.574.044.04c.058.059.122.137.182.24.249.425.249.96-.154 1.41l-.057.057c-.45.403-.986.403-1.411.154a1.182 1.182 0 0 1-.24-.182zm.617-.616.444-.444a.31.31 0 0 0-.063-.052c-.093-.055-.263-.055-.35.024l.208.232.207-.206.006.007-.22.257-.026-.024.033-.034.025.027-.257.22-.007-.007zm-.027-.415c-.078.088-.078.257-.023.35a.31.31 0 0 0 .051.063l.205-.204-.233-.209z" transform="translate(448 544)">
 </path></g></g></svg></span></button>
-<input dir="ltr" aria-autocomplete="list" aria-expanded="true" aria-label="Search product" role="combobox" placeholder="Search product" autocomplete="off" spellcheck="false" aria-invalid="false" class="x1i10hfl xggy1nq x1s07b3s x1kdt53j x1yc453h xhb22t3 xb5gni xcj1dhv x2s2ed0 xq33zhf xjyslct xjbqb8w x6umtig x1b1mbwd xaqea5y xav7gou xnwf7zb x40j3uw x1s7lred x15gyhx8 x9f619 xzsf02u xdl72j9 x1iyjqo2 xs83m0k xjb2p0i x6prxxf xeuugli x1a2a7pz x1n2onr6 x15h3p50 xm7lytj x1sxyh0 xdvlbce xurb0ha x1vqgdyp xo6swyp x1ad04t7 x1glnyev x1ix68h3 x19gujb8" type="search" value="" aria-controls=":Rql5akqbkq75b5klba:"></label>
+<input dir="ltr" aria-autocomplete="list" aria-expanded="true" aria-label="Search product" role="combobox" placeholder="Search product" autocomplete="off" spellcheck="false" aria-invalid="false" class="psearch" name="psearch" type="search" value="" aria-controls=":Rql5akqbkq75b5klba:"></label>
 </div></form>
 <select name="place" class=" place">
   <option default block="true">--select place--</option>
@@ -33,18 +33,12 @@
   <option value="">Sahid chowk</option>
   <option value="">TinKhole</option>
   <option value="">Baseni</option>
-  <option value="">Pokhara Buspark</option>
+  <option value="">Pokhara Buspark</option></select>
   <div class="buttons-container">
-    <a href="#" class="btn btn-signin">Sign In</a>
-    <a href="#" class="btn btn-signup">Sign Up</a>
+    <a> Login</a>
+<a> Signup</a>s
   </div>
 
-
-  
-
-
-
-</select>
 </header>
 <div class="side-bar">
   <h1>Categories</h1>
@@ -62,7 +56,7 @@
   <div class="products">
     {%for product in products%}
     <div class="card" link="width: 18rem;">
-        <a href=""><img height="200px" width = 300px src="{{product.image}}" class="card-img-top" alt="...">
+        <a href="detail"><img height="150px" width = 200px src="{{product.image.url}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{product.name}}( Rs {{product.price}})</h5></a>
           <button> Buy now</button>
@@ -70,13 +64,13 @@
       </div>
       {%endfor%}
     </div>
-    <div class="birthday-products">
+    <div class="bd-show">
       <h1>Birthday</h1>
       <div class="products">
         {%for product in products%}
         {% if product.category == "Birthday"%}
         <div class="card" link="width: 18rem;">
-            <a href=""><img height="200px" width = 300px src="{{product.image}}" class="card-img-top" alt="...">
+            <a href="detail"><img height="150px" width = 200px src="{{product.image.url}}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{product.name}}( Rs {{product.price}})</h5></a>
               <button> Buy now</button>
@@ -85,6 +79,82 @@
           {% endif %}
           {%endfor%}
         </div>
+          <div class="bd-show">
+            <h1>Electronics</h1>
+            <div class="products">
+              {%for product in products%}
+              {% if product.category == "Electronic"%}
+              <div class="card" link="width: 18rem;">
+                  <a href=""><img height="150px" width = 200px src="{{product.image}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{product.name}}( Rs {{product.price}})</h5></a>
+                    <button> Buy now</button>
+                  </div>
+                </div>
+                {% endif %}
+                {%endfor%}
+              </div>
+        
+        <div class="bd-show">
+          <h1>Anniversary</h1>
+          <div class="products">
+            {%for product in products%}
+            {% if product.category == "Anniversary"%}
+            <div class="card" link="width: 18rem;">
+                <a href=""><img height="150px" width = 200px src="{{product.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{product.name}}( Rs {{product.price}})</h5></a>
+                  <button> Buy now</button>
+                </div>
+              </div>
+              {% endif %}
+              {%endfor%}
+            </div>
+            <div class="bd-show">
+              <h1>Chocolate</h1>
+              <div class="products">
+                {%for product in products%}
+                {% if product.category == "Chocolate"%}
+                <div class="card" link="width: 18rem;">
+                    <a href=""><img height="150px" width = 200px src="{{product.image}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{product.name}}( Rs {{product.price}})</h5></a>
+                      <button> Buy now</button>
+                    </div>
+                  </div>
+                  {% endif %}
+                  {%endfor%}
+                </div>
+                <div class="bd-show">
+                  <h1>Jewels</h1>
+                  <div class="products">
+                    {%for product in products%}
+                    {% if product.category == "Jewels"%}
+                    <div class="card" link="width: 18rem;">
+                        <a href=""><img height="150px" width = 200px src="{{product.image}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">{{product.name}}( Rs {{product.price}})</h5></a>
+                          <button> Buy now</button>
+                        </div>
+                      </div>
+                      {% endif %}
+                      {%endfor%}
+                    </div>
+                    <div class="bd-show">
+                      <h1>Flowers</h1>
+                      <div class="products">
+                        {%for product in products%}
+                        {% if product.category == "Flowers"%}
+                        <div class="card" link="width: 18rem;">
+                            <a href=""><img height="150px" width = 200px src="{{product.image}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">{{product.name}}( Rs {{product.price}})</h5></a>
+                              <button> Buy now</button>
+                            </div>
+                          </div>
+                          {% endif %}
+                          {%endfor%}
+                        </div>
 </div>
 </body>
 </html>
