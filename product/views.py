@@ -10,3 +10,5 @@ def home(request):
     return render(request,'home.html',{'products':products})
 def detail(request):
     return render (request,'details.html')
+def login(request):
+    return render (request,'login.html')
