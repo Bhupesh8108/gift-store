@@ -7,13 +7,13 @@ categories = [
     ('Chocolate','clt'),
     ('Plants','pla'),
     ('Electronic','elt'),
-    ('Jewels','jwl')   
+    ('Jewels','jwl')
 ]
 import os
 
 def upload_path(instance, filename):
     base_filename, file_extension = os.path.splitext(filename)
-    return 'product/static/images/{}{}'.format(base_filename, file_extension)
+    return 'static/images/{}{}'.format(base_filename, file_extension)
 
 class item(models.Model):
     name = models.CharField(max_length=50)

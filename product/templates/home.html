@@ -18,7 +18,7 @@
   <div class="products">
     {%for product in products%}
     <div class="card" link="width: 18rem;">
-        <a href="detail"><img height="150px" width = 200px src="{{product.image.url}}" class="card-img-top" alt="...">
+        <a href=""><img height="150px" width = 200px src="{{product.image.url}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{product.name}}( Rs {{product.price}})</h5></a>
           <button> Buy now</button>
@@ -32,7 +32,7 @@
         {%for product in products%}
         {% if product.category == "Birthday"%}
         <div class="card" link="width: 18rem;">
-            <a href="detail"><img height="150px" width = 200px src="{{product.image.url}}" class="card-img-top" alt="...">
+            <a href=""><img height="150px" width = 200px src="{{product.image.url}}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{product.name}}( Rs {{product.price}})</h5></a>
               <button> Buy now</button>
@@ -56,7 +56,7 @@
                 {% endif %}
                 {%endfor%}
               </div>
-        
+
         <div class="bd-show">
           <h1>Anniversary</h1>
           <div class="products">
