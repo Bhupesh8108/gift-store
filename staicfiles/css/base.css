@@ -1,0 +1,46 @@
+.search-bar{
+    margin-left: 250px;
+    margin-top: 10px;
+}
+.brand-logo{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+header{
+    background-color: green;
+    width: 100%;
+
+}
+.main-header {
+    margin-top: 0;
+    width: 100%;
+    background-color: green;
+    display: flex;
+}
+.place{
+    margin-left:40px;
+    margin-top: 10px;
+    max-height: 20px;
+    min-width: 200px;}
+    .buttons-container a{
+        padding-top: 5px;
+        width: 80px;
+        height: 25px;
+        text-align: center;
+        place-items: center;
+        margin-left: 40px;
+        margin-top: 13px;
+        background-color: orange;
+        color :blue;
+        border-radius: 30px ;
+        border: 1px solid green;
+    }
+    .buttons-container a:hover{
+        color:purple;
+        background-color:rgb(130, 237, 130);
+        
+    }
+    .buttons-container{
+        margin-left: 650px;
+        display: flex;
+    }

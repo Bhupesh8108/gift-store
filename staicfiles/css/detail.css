@@ -1,0 +1,17 @@
+.search-bar{
+    margin-left: 250px;
+    margin-top: 10px;
+}
+header{
+    background-color: green;
+    width: 100%;
+}
+.main-header {
+    background-color: green;
+    display: flex;
+}
+.place{
+    margin-left:40px;
+    margin-top: 10px;
+    max-height: 20px;
+    min-width: 200px;}

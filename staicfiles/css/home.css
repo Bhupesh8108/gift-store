@@ -1,0 +1,115 @@
+
+.side-bar{
+    width: 200px;
+    height: 100%;
+    position: fixed;
+
+    background-color: rgba(29, 2, 186, 0.2);
+    backdrop-filter: blur(5px);
+}
+.product-show{
+    margin-left: 200px;
+}
+.side-bar h1{
+    margin-left: 20px;
+    color: white;}
+.side-bar a{
+    padding-top: 30px;
+    display:grid;
+    height:30px;
+    width : 200px;
+    color: green;
+    place-items: center ;
+    text-decoration: none;}
+.side-bar a:hover{
+    background-color: rgb(189, 185, 185);
+    color:black
+}
+
+.product-show h1{
+margin-left:20px;
+margin-top:50px
+}
+.products{
+    overflow: scroll;
+    display: flex;
+}
+
+.card{
+    display: inline-block;
+    margin-left : 10px;
+    margin-top: 20px;   
+}
+.purchase{
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove border */
+    color: white; /* White text */
+    padding: 15px 32px; /* Padding for button */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    /* display: inline-block; Display as block */
+    font-size: 16px; /* Font size */
+    margin: 2px 40px; /* Add margin */
+    cursor: pointer; /* Add cursor on hover */
+    border-radius: 8px; /* Add rounded corners */
+  }
+  .card img:hover{
+    transform:scale(.9);
+    z-index: 3;
+
+  }
+  .card a{
+    text-decoration: none;
+  }
+  .product-show button{
+    place-items: center;
+    border-radius: 50px;
+    background-color: rgb(130, 242, 177);
+    border: 2px solid blueviolet;
+    margin-left: 50px;
+  }
+  .product-show button:hover{
+    color: rgb(27, 60, 206);
+    border : 3px solid green;
+background-color: rgb(156, 227, 167);
+  }
+.product-show h5{
+    font-size: 18px;
+}
+
+
+.place{
+    margin-left:40px;
+    margin-top: 10px;
+    max-height: 20px;
+    min-width: 200px;}
+    .buttons-container a{
+        padding-top: 5px;
+        width: 80px;
+        height: 25px;
+        text-align: center;
+        place-items: center;
+        margin-left: 40px;
+        margin-top: 13px;
+        background-color: orange;
+        color :blue;
+        border-radius: 30px ;
+        border: 1px solid green;
+    }
+    .buttons-container a:hover{
+        color:purple;
+        background-color:rgb(130, 237, 130);
+        
+    }
+    .buttons-container{
+        margin-left: 650px;
+        display: flex;
+    }
+
+
+ 
+
+      
+      
+
+  
